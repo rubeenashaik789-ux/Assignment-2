@@ -36,3 +36,93 @@
     transform: rotate(360deg);
   }
 }
+/* Center everything and add some spacing */
+.app {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input box styling */
+input {
+  padding: 10px;
+  width: 65%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Add button styling */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Task list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Each task */
+li {
+  background-color: #fff;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Task text */
+li span {
+  cursor: pointer;
+}
+
+/* Delete button */
+li button {
+  background-color: #56f436;
+}
+
+li button:hover {
+  background-color: #e57e35;
+}
+
+/* Filter buttons container */
+.filter-buttons {
+  margin-top: 15px;
+}
+
+.filter-buttons button {
+  background-color: #2196F3;
+}
+
+.filter-buttons button:hover {
+  background-color: #1976D2;
+}
+
+/* No tasks message */
+p {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+}
