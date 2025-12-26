@@ -85,23 +85,26 @@ function App() {
         <p>No Tasks</p>
       ) : (
         <ul>
-          {filteredTasks.map((task, index) => (
-            <li key={index}>
-              <span
-                onClick={() => toggleTask(index)}
-                style={{
-                  textDecoration: task.completed ? "line-through" : "none",
-                  cursor: "pointer",
-                  flex: 1,
-                }}
-              >
-                {task.text}
-              </span>
-              <button onClick={() => editTask(index)}>✏️</button>
-              <button onClick={() => deleteTask(index)}>❌</button>
-            </li>
-          ))}
-        </ul>
+  {filteredTasks.map((task) => {
+    const originalIndex = tasks.indexOf(task); // get correct index from main tasks array
+    return (
+      <li key={originalIndex}>
+        <span
+          onClick={() => toggleTask(originalIndex)}
+          style={{
+            textDecoration: task.completed ? "line-through" : "none",
+            cursor: "pointer",
+            flex: 1,
+          }}
+        >
+          {task.text}
+        </span>
+        <button onClick={() => editTask(originalIndex)}>✏️</button>
+        <button onClick={() => deleteTask(originalIndex)}>❌</button>
+      </li>
+    );
+  })}
+</ul>
       )}
     </div>
   );
