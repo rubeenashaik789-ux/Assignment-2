@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="app">
-      <h2>Week 2 To-Do Assignment</h2>
+      <h2> To-Do List</h2>
 
       {/* Input and Add/Update button */}
       <input
